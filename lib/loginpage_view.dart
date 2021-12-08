@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginapp/homepage_view.dart';
+import 'package:loginapp/signup_view.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({ Key? key }) : super(key: key);
@@ -8,13 +9,15 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login page", style: TextStyle(
-          color: Colors.deepPurpleAccent, fontSize: 20, 
+        title: Center(
+          child: Text("Login page", style: TextStyle(
+            color: Colors.deepPurpleAccent, fontSize: 20, 
+          ),
+          ),
         ),
-        ),
-        actions: [Icon(Icons.filter_list, color: Colors.deepPurpleAccent,),
-        Icon(Icons.share, color: Colors.deepPurpleAccent,)
-        ],
+        // actions: [Icon(Icons.filter_list, color: Colors.deepPurpleAccent,),
+        // Icon(Icons.share, color: Colors.deepPurpleAccent,)
+        // ],
       ),
       body: ListView(
         children: [
@@ -55,6 +58,19 @@ class LoginPage extends StatelessWidget {
             style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
             child: 
             Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+            ),
+          ),
+           Padding(
+            padding: const EdgeInsets.only(top: 10, left: 90, right: 90),
+            child: TextButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) 
+              {
+                return SignUpPage();
+              }));
+            }, 
+            style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+            child: 
+            Text("Create Account", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
             ),
           )
         ],

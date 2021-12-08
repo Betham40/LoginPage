@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:loginapp/loginpage_view.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -17,9 +18,21 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.amberAccent,
         actions: [
-          Icon(Icons.filter_list, color: Colors.cyanAccent,),
-          Icon(Icons.search, color: Colors.cyanAccent)
+          TextButton(onPressed: () {
+             Navigator.push(context, MaterialPageRoute(builder: (context) 
+              {
+                return LoginPage();
+              }));
+          }, 
+          style: TextButton.styleFrom(backgroundColor: Colors.blue),
+          child: Text("Logout", 
+          style: TextStyle(color: Colors.white, fontSize: 20),)
+          )
         ],
+        // actions: [
+        //   Icon(Icons.filter_list, color: Colors.cyanAccent,),
+        //   Icon(Icons.share, color: Colors.cyanAccent)
+        // ],
       ),
       body: ListView(
         children: [
