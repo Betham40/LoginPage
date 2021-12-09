@@ -12,21 +12,24 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Electrical Hub",
         style: TextStyle(
-          fontSize: 20,
-          color: Colors.cyanAccent
+          fontSize: 25,
+          color: Colors.blue
         ),
         ),
         backgroundColor: Colors.amberAccent,
         actions: [
-          TextButton(onPressed: () {
-             Navigator.push(context, MaterialPageRoute(builder: (context) 
-              {
-                return LoginPage();
-              }));
-          }, 
-          style: TextButton.styleFrom(backgroundColor: Colors.blue),
-          child: Text("Logout", 
-          style: TextStyle(color: Colors.white, fontSize: 20),)
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: TextButton(onPressed: () {
+               Navigator.push(context, MaterialPageRoute(builder: (context) 
+                {
+                  return LoginPage();
+                }));
+            }, 
+            style: TextButton.styleFrom(backgroundColor: Colors.blue, fixedSize: Size(5, 2),),
+            child: Text("Logout", 
+            style: TextStyle(color: Colors.white, fontSize: 15),)
+            ),
           )
         ],
         // actions: [
@@ -71,13 +74,13 @@ class TabWidget extends StatelessWidget {
           ),
           title: Text(service,
            style: TextStyle(
-             color: Colors.greenAccent, 
+             color: Colors.white, 
              fontSize: 25,
              fontWeight: FontWeight.bold,
              ),
              ),
         ),
-        color: Colors.orangeAccent,
+        color: Colors.blue,
         elevation: 15,
       
       ),

@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:loginapp/homepage_view.dart';
 
