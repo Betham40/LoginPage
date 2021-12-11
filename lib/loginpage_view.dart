@@ -19,69 +19,71 @@ class LoginPage extends StatelessWidget {
         // Icon(Icons.share, color: Colors.deepPurpleAccent,)
         // ],
       ),
-      body: ListView(
-        children: [
-          Center(
-            child: Padding(
-              padding: EdgeInsets.only(top:80.0),
-              child: CircleAvatar(
-                radius: 60,
-                backgroundImage: NetworkImage("https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmFydXRvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 60, right: 60,),
-            child: TextFormField(
-              decoration: InputDecoration(
-                label: Text("Enter Name", style: TextStyle(color: Colors.lightBlueAccent),),
-              ),
-            ),
-          ),
-          SizedBox(height: 10,),
-          Padding(
-            padding: const EdgeInsets.only(left: 60, right: 60,),
-            child: TextFormField(
-              decoration: InputDecoration(
-                label: Text("Enter Password", style: TextStyle(color: Colors.lightBlueAccent),),
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10, left: 90, right: 25,),
-            child: Row(
-              children: [
-                TextButton(onPressed: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) 
-                  {
-                    return HomePage();
-                  }));
-                }, 
-                style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
-                child: 
-                Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+      body: Form(
+        child: ListView(
+          children: [
+            Center(
+              child: Padding(
+                padding: EdgeInsets.only(top:80.0),
+                child: CircleAvatar(
+                  radius: 60,
+                  backgroundImage: NetworkImage("https://images.unsplash.com/photo-1541562232579-512a21360020?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmFydXRvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left:8.0),
-                  child: Text("Create Account", textAlign: TextAlign.right,),
-                ),
-              ],
+              ),
             ),
-          ),
-          //  Padding(
-          //   padding: const EdgeInsets.only(top: 10, left: 90, right: 90),
-          //   child: TextButton(onPressed: (){
-          //     Navigator.push(context, MaterialPageRoute(builder: (context) 
-          //     {
-          //       return SignUpPage();
-          //     }));
-          //   }, 
-          //   style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
-          //   child: 
-          //   Text("Create Account", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
-          //   ),
-          // )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(left: 60, right: 60,),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  label: Text("Enter Name", style: TextStyle(color: Colors.lightBlueAccent),),
+                ),
+              ),
+            ),
+            SizedBox(height: 10,),
+            Padding(
+              padding: const EdgeInsets.only(left: 60, right: 60,),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  label: Text("Enter Password", style: TextStyle(color: Colors.lightBlueAccent),),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10, left: 90, right: 25,),
+              child: Row(
+                children: [
+                  TextButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) 
+                    {
+                      return HomePage();
+                    }));
+                  }, 
+                  style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+                  child: 
+                  Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left:8.0),
+                    child: Text("Create Account", textAlign: TextAlign.right,),
+                  ),
+                ],
+              ),
+            ),
+            //  Padding(
+            //   padding: const EdgeInsets.only(top: 10, left: 90, right: 90),
+            //   child: TextButton(onPressed: (){
+            //     Navigator.push(context, MaterialPageRoute(builder: (context) 
+            //     {
+            //       return SignUpPage();
+            //     }));
+            //   }, 
+            //   style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+            //   child: 
+            //   Text("Create Account", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+            //   ),
+            // )
+          ],
+        ),
       ),
     );
   }
