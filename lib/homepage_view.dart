@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:loginapp/loginpage_view.dart';
 
@@ -21,7 +19,7 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextButton(onPressed: () {
-               Navigator.push(context, MaterialPageRoute(builder: (context) 
+               Navigator.pop(context, MaterialPageRoute(builder: (context) 
                 {
                   return LoginPage();
                 }));

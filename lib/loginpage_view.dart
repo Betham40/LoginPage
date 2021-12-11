@@ -48,31 +48,39 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 10, left: 90, right: 90),
-            child: TextButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) 
-              {
-                return HomePage();
-              }));
-            }, 
-            style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
-            child: 
-            Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+            padding: const EdgeInsets.only(top: 10, left: 90, right: 25,),
+            child: Row(
+              children: [
+                TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) 
+                  {
+                    return HomePage();
+                  }));
+                }, 
+                style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+                child: 
+                Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left:8.0),
+                  child: Text("Create Account", textAlign: TextAlign.right,),
+                ),
+              ],
             ),
           ),
-           Padding(
-            padding: const EdgeInsets.only(top: 10, left: 90, right: 90),
-            child: TextButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (context) 
-              {
-                return SignUpPage();
-              }));
-            }, 
-            style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
-            child: 
-            Text("Create Account", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
-            ),
-          )
+          //  Padding(
+          //   padding: const EdgeInsets.only(top: 10, left: 90, right: 90),
+          //   child: TextButton(onPressed: (){
+          //     Navigator.push(context, MaterialPageRoute(builder: (context) 
+          //     {
+          //       return SignUpPage();
+          //     }));
+          //   }, 
+          //   style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+          //   child: 
+          //   Text("Create Account", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+          //   ),
+          // )
         ],
       ),
     );
