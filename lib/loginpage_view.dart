@@ -62,27 +62,76 @@ class LoginPage extends StatelessWidget {
                   child: 
                 const  Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
                   ),
-                 const Padding(
-                    // ignore: unnecessary_const
-                    padding: const EdgeInsets.only(left:8.0),
-                    child: Text("Create Account", textAlign: TextAlign.right,),
-                  ),
+                    Padding(
+              padding: const EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
+              child: TextButton(onPressed: (){
+                showBottomSheet(context: context, builder: (context) 
+                {
+                  return Wrap(
+                    children:  [
+                    const  ListTile(
+                        title: Center(
+                          child: Text('Create New Account',
+                          style: TextStyle(color: Colors.amberAccent),
+                          ),
+                        ),
+                        tileColor: Colors.lightBlue,
+                      ),
+                      Wrap(
+                         children:[ Padding(
+                           padding: const EdgeInsets.all(8.0),
+                           child: TextFormField(
+                             decoration: const InputDecoration(
+                               label: Text("Enter Name")
+                             ),
+                           ),
+                         ),
+                          Padding(
+            padding: const EdgeInsets.only(left:60, right: 60, top: 20),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                label: Text("Enter Surname")
+              ),
+            ),
+          ),
+           Padding(
+            padding: const EdgeInsets.only(left:60, right: 60, top: 20),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                label: Text("Enter Password")
+              ),
+            ),
+          ),
+           Padding(
+            padding: const EdgeInsets.only(left:60, right: 60, top: 20),
+            child: TextFormField(
+              decoration: const InputDecoration(
+                label: Text("Confirm Password")
+              ),
+            ),
+          ),
+                         ]
+                         ),
+                    ],
+                  );
+                });
+              }, 
+              style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
+              child: 
+              const Text("Create", 
+              style: TextStyle(color: Colors.blueAccent, 
+              fontSize: 20,))
+              ),
+            )
+                //  const Padding(
+                //     // ignore: unnecessary_const
+                //     padding: const EdgeInsets.only(left:8.0),
+                //     child: Text("Create Account", textAlign: TextAlign.right,),
+                //   ),
                 ],
               ),
             ),
-            //  Padding(
-            //   padding: const EdgeInsets.only(top: 10, left: 90, right: 90),
-            //   child: TextButton(onPressed: (){
-            //     Navigator.push(context, MaterialPageRoute(builder: (context) 
-            //     {
-            //       return SignUpPage();
-            //     }));
-            //   }, 
-            //   style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
-            //   child: 
-            //   Text("Create Account", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
-            //   ),
-            // )
+           
           ],
         ),
       ),
