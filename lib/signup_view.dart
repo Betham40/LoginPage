@@ -8,7 +8,7 @@ class SignUpPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Create New Account",
+        title: const Center(child: Text("Create New Account",
          style: TextStyle(color: Colors.yellow,
          fontSize: 20,
          fontWeight: FontWeight.bold
@@ -21,7 +21,7 @@ class SignUpPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left:60, right: 60, top: 20),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 label: Text("Enter Name")
               ),
             ),
@@ -29,7 +29,7 @@ class SignUpPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top:8.0, left: 60, right: 60),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration:const InputDecoration(
                label: Text("Enter Surname") 
               ),
             ),
@@ -37,7 +37,7 @@ class SignUpPage extends StatelessWidget {
            Padding(
             padding: const EdgeInsets.only(top:8.0, left: 60, right: 60),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                label: Text("Enter Email") 
               ),
             ),
@@ -45,7 +45,7 @@ class SignUpPage extends StatelessWidget {
            Padding(
             padding: const EdgeInsets.only(top:8.0, left: 60, right: 60),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                label: Text("Enter Password") 
               ),
             ),
@@ -53,7 +53,7 @@ class SignUpPage extends StatelessWidget {
            Padding(
             padding: const EdgeInsets.only(top:8.0, left: 60, right: 60),
             child: TextFormField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                label: Text("Confirm Password") 
               ),
             ),
@@ -63,11 +63,11 @@ class SignUpPage extends StatelessWidget {
             child: TextButton(onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) 
               {
-                return HomePage();
+                return const HomePage();
               }));
             },
           style: TextButton.styleFrom(backgroundColor: Colors.blue), 
-          child: Text("Sign Up / Login", style: TextStyle(
+          child: const Text("Sign Up / Login", style: TextStyle(
             color: Colors.yellow, fontSize: 15,
             fontWeight: FontWeight.bold
           ),)

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:loginapp/homepage_view.dart';
-import 'package:loginapp/signup_view.dart';
+// import 'package:loginapp/signup_view.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({ Key? key }) : super(key: key);
@@ -9,7 +9,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
+        title: const Center(
           child: Text("Login page", style: TextStyle(
             color: Colors.deepPurpleAccent, fontSize: 20, 
           ),
@@ -22,7 +22,7 @@ class LoginPage extends StatelessWidget {
       body: Form(
         child: ListView(
           children: [
-            Center(
+          const  Center(
               child: Padding(
                 padding: EdgeInsets.only(top:80.0),
                 child: CircleAvatar(
@@ -34,16 +34,16 @@ class LoginPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 60, right: 60,),
               child: TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   label: Text("Enter Name", style: TextStyle(color: Colors.lightBlueAccent),),
                 ),
               ),
             ),
-            SizedBox(height: 10,),
+          const  SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(left: 60, right: 60,),
               child: TextFormField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   label: Text("Enter Password", style: TextStyle(color: Colors.lightBlueAccent),),
                 ),
               ),
@@ -55,14 +55,15 @@ class LoginPage extends StatelessWidget {
                   TextButton(onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) 
                     {
-                      return HomePage();
+                      return const HomePage();
                     }));
                   }, 
                   style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
                   child: 
-                  Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
+                const  Text("Login", style: TextStyle(color: Colors.blueAccent, fontSize: 20,))
                   ),
-                  Padding(
+                 const Padding(
+                    // ignore: unnecessary_const
                     padding: const EdgeInsets.only(left:8.0),
                     child: Text("Create Account", textAlign: TextAlign.right,),
                   ),

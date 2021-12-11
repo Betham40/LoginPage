@@ -8,8 +8,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Electrical Hub",
-        style: TextStyle(
+        title: const Text("Electrical Hub",
+        style:  TextStyle(
           fontSize: 25,
           color: Colors.blue
         ),
@@ -21,11 +21,11 @@ class HomePage extends StatelessWidget {
             child: TextButton(onPressed: () {
                Navigator.pop(context, MaterialPageRoute(builder: (context) 
                 {
-                  return LoginPage();
+                  return const LoginPage();
                 }));
             }, 
-            style: TextButton.styleFrom(backgroundColor: Colors.blue, fixedSize: Size(5, 2),),
-            child: Text("Logout", 
+            style: TextButton.styleFrom(backgroundColor: Colors.blue, fixedSize: const Size(5, 2),),
+            child: const Text("Logout", 
             style: TextStyle(color: Colors.white, fontSize: 15),)
             ),
           )
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
         // ],
       ),
       body: ListView(
-        children: [
+        children: const [
           TabWidget(
             service: "Electronic Servicing",
           ),
@@ -67,11 +67,11 @@ class TabWidget extends StatelessWidget {
       padding: const EdgeInsets.all(20.0),
       child: Card(
         child: ListTile(
-          leading: CircleAvatar(
+          leading: const CircleAvatar(
           backgroundImage: NetworkImage("https://media.istockphoto.com/photos/modern-electronics-research-development-facility-black-female-does-picture-id1319077259?b=1&k=20&m=1319077259&s=170667a&w=0&h=2hT5XC7GK5Y2z4ytQCL_0QnZUkoucTGuX0SsHrab_oo="),  
           ),
           title: Text(service,
-           style: TextStyle(
+           style: const TextStyle(
              color: Colors.white, 
              fontSize: 25,
              fontWeight: FontWeight.bold,
