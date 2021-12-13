@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:loginapp/create_new_account.dart';
 import 'package:loginapp/homepage_view.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 // import 'package:loginapp/signup_view.dart';
 
 class LoginPage extends StatelessWidget {
@@ -65,56 +67,9 @@ class LoginPage extends StatelessWidget {
                     Padding(
               padding: const EdgeInsets.only(top: 10, left: 20, right: 20, bottom: 10),
               child: TextButton(onPressed: (){
-                showBottomSheet(context: context, builder: (context) 
-                {
-                  return Wrap(
-                    children:  [
-                    const  ListTile(
-                        title: Center(
-                          child: Text('Create New Account',
-                          style: TextStyle(color: Colors.amberAccent),
-                          ),
-                        ),
-                        tileColor: Colors.lightBlue,
-                      ),
-                      Wrap(
-                         children:[ Padding(
-                           padding: const EdgeInsets.all(8.0),
-                           child: TextFormField(
-                             decoration: const InputDecoration(
-                               label: Text("Enter Name")
-                             ),
-                           ),
-                         ),
-                          Padding(
-            padding: const EdgeInsets.only(left:60, right: 60, top: 20),
-            child: TextFormField(
-              decoration: const InputDecoration(
-                label: Text("Enter Surname")
-              ),
-            ),
-          ),
-           Padding(
-            padding: const EdgeInsets.only(left:60, right: 60, top: 20),
-            child: TextFormField(
-              decoration: const InputDecoration(
-                label: Text("Enter Password")
-              ),
-            ),
-          ),
-           Padding(
-            padding: const EdgeInsets.only(left:60, right: 60, top: 20),
-            child: TextFormField(
-              decoration: const InputDecoration(
-                label: Text("Confirm Password")
-              ),
-            ),
-          ),
-                         ]
-                         ),
-                    ],
-                  );
-                });
+              showBarModalBottomSheet(context: context, builder: (context){
+                return CreatePage();
+              });
               }, 
               style:TextButton.styleFrom(backgroundColor: Colors.amberAccent),
               child: 

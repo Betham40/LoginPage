@@ -35,53 +35,84 @@ class HomePage extends StatelessWidget {
         //   Icon(Icons.share, color: Colors.cyanAccent)
         // ],
       ),
-      body: ListView(
-        children: const [
-          TabWidget(
-            service: "Electronic Servicing",
-          ),
-          TabWidget(
-            service: "Electrical Installation",
-          ),
-          TabWidget(
-            service: "Electrical Wiring"
-          ),
-          TabWidget(
-            service: "Electrical Plan",
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class TabWidget extends StatelessWidget {
-  const TabWidget({
-    Key? key, required this.service,
-  }) : super(key: key);
-  final String service;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Card(
-        child: ListTile(
-          leading: const CircleAvatar(
-          backgroundImage: NetworkImage("https://media.istockphoto.com/photos/modern-electronics-research-development-facility-black-female-does-picture-id1319077259?b=1&k=20&m=1319077259&s=170667a&w=0&h=2hT5XC7GK5Y2z4ytQCL_0QnZUkoucTGuX0SsHrab_oo="),  
-          ),
-          title: Text(service,
-           style: const TextStyle(
-             color: Colors.white, 
-             fontSize: 25,
-             fontWeight: FontWeight.bold,
-             ),
-             ),
-        ),
-        color: Colors.blue,
-        elevation: 15,
+       body: ListView(
+       children: [
+         Card(
+           clipBehavior: Clip.antiAlias,
+           child: Column(
+             children:[
+               ListTile(
+                 tileColor: Colors.blueAccent,
+                 leading: const Icon(Icons.arrow_drop_down_circle),
+                 title: const Text("Card title 1"),
+                 subtitle: Text("Secondary text", style: TextStyle( color: Colors.black.withOpacity(0.6)),
+                 ),
+               ),
+               Padding(
+                 padding: const EdgeInsets.all(16.0),
+                 child: Text(
+                   'Bam Electrical is at your service',
+                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                 ),
+               ),
+               ButtonBar(
+                 alignment: MainAxisAlignment.start,
+                 children: [
+                   // ignore: deprecated_member_use
+                   FlatButton(onPressed: () {},
+                   color: Colors.cyanAccent,
+                    child: const Text('Action 1'),
+                   ),
+                    // ignore: deprecated_member_use
+                    FlatButton(onPressed: () {},
+                   color: Colors.cyanAccent,
+                    child: const Text('Action 2'),
+                   ),
+                 ],
+                 ),
+                 Image.network('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
+             ]
+           ),
+         ),
+         Card(
+           clipBehavior: Clip.antiAlias,
+           child: Column(
+             children:[
+               ListTile(
+                 leading: const Icon(Icons.arrow_drop_down_circle),
+                 title: const Text("Card title 1"),
+                 subtitle: Text("Secondary text", style: TextStyle( color: Colors.black.withOpacity(0.6)),
+                 ),
+               ),
+               Padding(
+                 padding: const EdgeInsets.all(16.0),
+                 child: Text(
+                   'Bam Electrical is at your service',
+                  style: TextStyle(color: Colors.black.withOpacity(0.6)),
+                 ),
+               ),
+               ButtonBar(
+                 alignment: MainAxisAlignment.start,
+                 children: [
+                    // ignore: deprecated_member_use
+                    FlatButton(onPressed: () {},
+                   color: Colors.redAccent,
+                    child: const Text('Action 1'),
+                   ),
+                   // ignore: deprecated_member_use
+                   FlatButton(onPressed: () {}, 
+                   color: Colors.redAccent,
+                   child: const Text('Action 2'),
+                   ),
+                 ],
+                 ),
+                 Image.network('https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODR8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60')
+             ]
+           ),
+         ),
+        ] )
       
-      ),
     );
   }
 }
+
